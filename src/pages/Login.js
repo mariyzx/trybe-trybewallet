@@ -45,41 +45,43 @@ class Login extends React.Component {
   render() {
     const { disabled, redirect } = this.state;
     return (
-      <div>
-        <h1>Trybewallet!</h1>
-        <form>
-          <div>
-            <label htmlFor="email">
-              <input
-                type="email"
-                name="email"
-                data-testid="email-input"
-                onChange={ (e) => this.handleChange(e) }
-                placeholder="* Email"
-              />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="senha">
-              <input
-                name="senha"
-                type="password"
-                data-testid="password-input"
-                onChange={ (e) => this.handleChange(e) }
-                placeholder="* Senha (6 dígitos)"
-              />
-            </label>
-          </div>
-          <button
-            type="button"
-            onClick={ this.handleButton }
-            disabled={ disabled }
-          >
-            Entrar
-          </button>
-        </form>
-        { redirect && <Redirect to="/carteira" /> }
-        <Footer />
+      <div className="flex justify-center items-center h-screen">
+        <div /* card */>
+          <h1>Trybewallet!</h1>
+          <form>
+            <div>
+              <label htmlFor="email">
+                <input
+                  type="email"
+                  name="email"
+                  data-testid="email-input"
+                  onChange={ (e) => this.handleChange(e) }
+                  placeholder="* Email"
+                />
+              </label>
+            </div>
+            <div>
+              <label htmlFor="senha">
+                <input
+                  name="senha"
+                  type="password"
+                  data-testid="password-input"
+                  onChange={ (e) => this.handleChange(e) }
+                  placeholder="* Senha (6 dígitos)"
+                />
+              </label>
+            </div>
+            <button
+              type="button"
+              onClick={ this.handleButton }
+              disabled={ disabled }
+            >
+              Entrar
+            </button>
+          </form>
+          { redirect && <Redirect to="/carteira" /> }
+          <Footer />
+        </div>
       </div>
     );
   }
