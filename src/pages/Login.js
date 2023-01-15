@@ -45,9 +45,9 @@ class Login extends React.Component {
   render() {
     const { disabled, redirect } = this.state;
     return (
-      <div className="main-login">
-        <h1 className="heading-login">Trybewallet!</h1>
-        <form className="div-login">
+      <div>
+        <h1>Trybewallet!</h1>
+        <form>
           <div>
             <label htmlFor="email">
               <input
@@ -56,7 +56,6 @@ class Login extends React.Component {
                 data-testid="email-input"
                 onChange={ (e) => this.handleChange(e) }
                 placeholder="* Email"
-                className="input-login"
               />
             </label>
           </div>
@@ -68,7 +67,6 @@ class Login extends React.Component {
                 data-testid="password-input"
                 onChange={ (e) => this.handleChange(e) }
                 placeholder="* Senha (6 dígitos)"
-                className="input-login"
               />
             </label>
           </div>
@@ -76,7 +74,6 @@ class Login extends React.Component {
             type="button"
             onClick={ this.handleButton }
             disabled={ disabled }
-            className="login-button"
           >
             Entrar
           </button>
